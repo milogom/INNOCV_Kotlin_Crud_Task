@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_app_name">INNOCV Kotlin Crud Task</string>
+    <string name="str_api_reading_error">An error has occured while accesing data</string>
+    <string name="str_card_id_label">ID:</string>
+    <string name="str_card_name_label">Name:</string>
+    <string name="str_card_birthdate_label">Birth Date:</string>
+    <string name="str_search_for_id">Search for ID</string>
+    <string name="str_delete_user_error">Saving user error</string>
+</resources>

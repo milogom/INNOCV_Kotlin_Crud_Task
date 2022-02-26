@@ -1,0 +1,9 @@
+<resources>
+    <string name="str_app_name">INNOCV Tarea Crud Kotlin</string>
+    <string name="str_api_reading_error">Ha ocurrido un error al acceder a los datos</string>
+    <string name="str_card_id_label">ID:</string>
+    <string name="str_card_name_label">Nombre:</string>
+    <string name="str_card_birthdate_label">Fecha Nacimiento:</string>
+    <string name="str_search_for_id">Búsqueda por ID</string>
+    <string name="str_delete_user_error">Error borrando el usuario</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    app:cardBackgroundColor="@color/teal_200"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="105dp">
+
+    <RelativeLayout
+        android:id="@+id/boxRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="InvalidId">
+
+        <TextView
+            android:id="@+id/tvUserIdLabel"
+            android:text="@string/str_card_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvUserId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@id/tvUserIdLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tvUserNameLabel"
+            android:text="@string/str_card_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tvUserId"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tvUserId"
+            android:layout_toRightOf="@id/tvUserNameLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tvUserBirthDateLabel"
+            android:text="@string/str_card_birthdate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvUserBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tvUserName"
+            android:layout_toRightOf="@id/tvUserBirthDateLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_toLeftOf="@id/user_delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_edit_black_24"
+            android:id="@+id/user_edit_icon"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/user_delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_person_remove_black_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
