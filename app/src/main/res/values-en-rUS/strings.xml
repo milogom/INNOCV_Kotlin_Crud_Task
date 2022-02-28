@@ -4,7 +4,21 @@
     <string name="str_api_reading_error">An error has occured while accesing data</string>
     <string name="str_card_id_label">ID:</string>
     <string name="str_card_name_label">Name:</string>
-    <string name="str_card_birthdate_label">Birth Date:</string>
+    <string name="str_card_birthday_label">Birth Date:</string>
     <string name="str_search_for_id">Search for ID</string>
     <string name="str_delete_user_error">Saving user error</string>
+    <string name="str_add_user_icon">Add User Icon</string>
+    <string name="str_test">Test</string>
+    <string name="str_hint_enter_id">Enter ID</string>
+    <string name="str_error_saving_user">Error while saving user</string>
+    <string name="str_save">Save</string>
+    <string name="str_hint_enter_name">Enter name</string>
+    <string name="str_hint_enter_birthday">Enter birthdate (dd/mm/yyyy)</string>
+    <string name="str_error_entering_data">Data error while filling form</string>
+    <string name="str_error_empty_fields">Please, fill in all fields</string>
+    <string name="str_user_edit">Editing user</string>
+    <string name="str_deleted_user">User deleted</string>
+    <string name="str_user_created">User added</string>
+    <string name="str_user_saved">User saved</string>
+    <string name="str_user_show">Mostrando usuario</string>
 </resources>

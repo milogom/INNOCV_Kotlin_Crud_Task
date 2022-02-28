@@ -6,29 +6,30 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-
 class ApiClient {
 
-    companion object{
+    companion object {
 
         const val BASEURL = "https://hello-world.innocv.com/api/"
 
-        private var retrofit:Retrofit?=null
+        private var retrofit: Retrofit? = null
 
         fun getApiClient(): Retrofit {
             val gson = GsonBuilder()
-                .setLenient()
-                .create()
+                    .setLenient()
+                    .create()
             val okHttpClient = OkHttpClient.Builder()
-                .readTimeout(100, TimeUnit.SECONDS)
-                .connectTimeout(100, TimeUnit.SECONDS)
-                .build()
+                    .writeTimeout(100, TimeUnit.SECONDS)
+                    .readTimeout(100, TimeUnit.SECONDS)
+                    .connectTimeout(100, TimeUnit.SECONDS)
+                    .build()
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-                    .baseUrl(BASEURL)
-                    .client(okHttpClient)
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .build()
+                        .baseUrl(BASEURL)
+                        .client(okHttpClient)
+                        .addConverterFactory(NullOnEmptyConverterFactory())
+                        .addConverterFactory(GsonConverterFactory.create(gson))
+                        .build()
             }
             return retrofit!!
         }

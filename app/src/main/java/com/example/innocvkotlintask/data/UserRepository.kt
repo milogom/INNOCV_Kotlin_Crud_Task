@@ -27,8 +27,8 @@ class UserRepository {
             }
 
             override fun onResponse(
-                call: Call<List<UserModel>>,
-                response: Response<List<UserModel>>
+                    call: Call<List<UserModel>>,
+                    response: Response<List<UserModel>>
             ) {
                 val res = response.body()
                 if (response.code() == 200 && res != null) {
@@ -41,30 +41,73 @@ class UserRepository {
         return data
     }
 
-    fun addUser(userModel: UserModel): LiveData<UserModel> {
+    fun getUserById(id: Int): LiveData<UserModel> {
 
         val data = MutableLiveData<UserModel>()
 
-        apiInterface?.addUser(userModel)?.enqueue(object : Callback<UserModel> {
-            override fun onFailure(call: Call<UserModel>, t: Throwable) {
-                data.value = null
-            }
-
-            override fun onResponse(call: Call<UserModel>, response: Response<UserModel>) {
+        apiInterface?.getUserById(id)?.enqueue(object : Callback<UserModel> {
+            override fun onResponse(call:
+                                    Call<UserModel>,
+                                    response: Response<UserModel>) {
                 val res = response.body()
-                if (response.code() == 201 && res != null) {
+                if (response.code() == 200 && res != null) {
                     data.value = res
                 } else {
                     data.value = null
                 }
             }
+
+            override fun onFailure(call: Call<UserModel>, t: Throwable) {
+                data.value = null
+            }
         })
 
         return data
+    }
+
+    fun addUser(userModel: UserModel): LiveData<Boolean> {
+
+        val callSuccess = MutableLiveData<Boolean>()
+
+        apiInterface?.addUser(userModel)?.enqueue(object : Callback<UserModel> {
+
+            override fun onResponse(
+                    call: Call<UserModel>,
+                    response: Response<UserModel>) {
+                callSuccess.value = response.code() == 200
+            }
+
+            override fun onFailure(call: Call<UserModel>, t: Throwable) {
+               callSuccess.value = false
+            }
+        })
+
+        return callSuccess
 
     }
 
-    fun deletePost(id: Int): LiveData<Boolean> {
+    fun modifyUser(userModel: UserModel): LiveData<Boolean> {
+
+        val callSuccess = MutableLiveData<Boolean>()
+
+        apiInterface?.modifyUser(userModel)?.enqueue(object : Callback<UserModel> {
+
+            override fun onResponse(
+                    call: Call<UserModel>,
+                    response: Response<UserModel>) {
+                callSuccess.value = response.code() == 200
+            }
+
+            override fun onFailure(call: Call<UserModel>, t: Throwable) {
+                callSuccess.value = false
+            }
+        })
+
+        return callSuccess
+
+    }
+
+    fun deleteUser(id: Int): LiveData<Boolean> {
 
         val data = MutableLiveData<Boolean>()
 
@@ -76,6 +119,7 @@ class UserRepository {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 data.value = response.code() == 200
             }
+
         })
 
         return data

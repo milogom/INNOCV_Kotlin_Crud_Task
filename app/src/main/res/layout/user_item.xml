@@ -6,9 +6,7 @@
     app:cardCornerRadius="30dp"
     app:cardBackgroundColor="@color/teal_200"
     android:layout_marginBottom="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_height="105dp">
+    android:layout_height="95dp">
 
     <RelativeLayout
         android:id="@+id/boxRelative"
@@ -39,7 +37,7 @@
             android:layout_height="20dp"
             android:layout_below="@+id/tvUserId"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="5dp" />
 
         <TextView
             android:id="@+id/tvUserName"
@@ -47,17 +45,17 @@
             android:layout_height="20dp"
             android:layout_below="@+id/tvUserId"
             android:layout_toRightOf="@id/tvUserNameLabel"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/tvUserBirthDateLabel"
-            android:text="@string/str_card_birthdate_label"
+            android:text="@string/str_card_birthday_label"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_below="@id/tvUserName"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/tvUserBirthDate"
@@ -65,7 +63,7 @@
             android:layout_height="20dp"
             android:layout_below="@+id/tvUserName"
             android:layout_toRightOf="@id/tvUserBirthDateLabel"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"/>
 
         <ImageView
@@ -75,7 +73,7 @@
             android:src="@drawable/round_edit_black_24"
             android:id="@+id/user_edit_icon"
             android:layout_alignParentBottom="true"
-            android:padding="10dp" />
+            android:layout_margin="15dp"/>
 
         <ImageView
             android:id="@+id/user_delete_icon"
@@ -84,8 +82,7 @@
             android:src="@drawable/round_person_remove_black_24"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:padding="10dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_margin="15dp"/>
 
     </RelativeLayout>
 

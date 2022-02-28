@@ -3,7 +3,21 @@
     <string name="str_api_reading_error">Ha ocurrido un error al acceder a los datos</string>
     <string name="str_card_id_label">ID:</string>
     <string name="str_card_name_label">Nombre:</string>
-    <string name="str_card_birthdate_label">Fecha Nacimiento:</string>
+    <string name="str_card_birthday_label">Fecha Nacimiento:</string>
     <string name="str_search_for_id">Búsqueda por ID</string>
     <string name="str_delete_user_error">Error borrando el usuario</string>
+    <string name="str_add_user_icon">Add User Icon</string>
+    <string name="str_test">Prueba</string>
+    <string name="str_error_saving_user">Error guardando el usuario</string>
+    <string name="str_save">Guardar</string>
+    <string name="str_hint_enter_name">Introduzca nombre</string>
+    <string name="str_hint_enter_id">Introduzca ID</string>
+    <string name="str_hint_enter_birthday">Introduzca fecha nac. (dd/mm/aaaa)</string>
+    <string name="str_error_entering_data">Error en la introducción de datos</string>
+    <string name="str_error_empty_fields">Por favor, rellene todos los campos</string>
+    <string name="str_user_edit">Editando usuario</string>
+    <string name="str_deleted_user">Usuario borrado</string>
+    <string name="str_user_created">Usuario añadido</string>
+    <string name="str_user_saved">Usuario guardado</string>
+    <string name="str_user_show">Mostrando usuario</string>
 </resources>
