@@ -16,7 +16,6 @@ import com.example.innocvkotlintask.data.UserModel
 import com.example.innocvkotlintask.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.input_box.view.*
-import kotlinx.android.synthetic.main.input_box.view.etBirthday
 import kotlinx.android.synthetic.main.show_box.view.*
 import java.text.SimpleDateFormat
 import java.time.OffsetDateTime
@@ -45,10 +44,11 @@ class MainActivity : AppCompatActivity(), UserAdapter.UserListener, View.OnClick
     }
 
     override fun onItemCreated() {
+        showToast(getString(R.string.str_user_added))
         val dialog = Dialog(this)
         val view = LayoutInflater.from(this).inflate(R.layout.input_box, null)
-        var name: String =""
-        var birthday: String=""
+        var name: String = ""
+        var birthday: String = ""
 
         view.etBirthday?.setOnClickListener { showDatePickerDialog(view) }
 
@@ -166,7 +166,7 @@ class MainActivity : AppCompatActivity(), UserAdapter.UserListener, View.OnClick
         window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
     }
 
-    private fun showList(vm: UserViewModel, position: Int){
+    private fun showList(vm: UserViewModel, position: Int) {
         vm.getUsers()
         vm.userListLiveData?.observe(this, Observer {
             progressbar.visibility = View.VISIBLE
